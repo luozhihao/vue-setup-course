@@ -8,11 +8,13 @@ import Index from '../views/index.vue'
 export default new Router({
 	mode: 'hash',
 	routes: [
-		{ 
-            path: '/', 
-            name: 'index', 
-            component: Index,
-        },
-        { path: '*', redirect: '/' },
+		{
+			path: '/',
+			name: 'index',
+			component: Index,	
+		},
+		{
+			path: '*', redirect: '/',
+		}
 	]
 })

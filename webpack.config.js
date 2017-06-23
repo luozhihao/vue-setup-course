@@ -15,24 +15,22 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     module: {
-        rules: [
-            {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
-            }, {
-                test: /\.vue$/,
-                loader: 'vue-loader',
-            },
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
-            },
-        ]
+        rules: [{
+            test: /\.css$/,
+            loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
+        }, {
+            test: /\.vue$/,
+            loader: 'vue-loader',
+        },
+        {
+            test: /\.js$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+        }]
     },
     plugins: [
         new HTMLPlugin({
-            title: 'vue项目',
+            title: 'webpack项目',
             template: 'index.html'
         }),
 
